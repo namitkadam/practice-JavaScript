@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}   
+:root{
+    --primary-text-color:#fff;
+    --seconfry-text-color:#222;
+    --background-color:#fff;
+    --primary-fs:1.1em;
+}
+body{
+    color: #333;
+    height: 100vh;
+    background: linear-gradient(to top left, #28b487,#7dd56f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.show-modal{
+    padding: 10px 20px;
+    font-size: var(--primary-fs);
+    border-radius: 50px;
+    border: #28b487;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 5rem .6rem;
+}
+
+.modal h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.modal p{
+    font-size: 1.5em;
+}
+
+/* ---------------------------------------- */
+/* Calsses to Make Modal Work */
+.hidden{
+    display: none;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px 50px;
+    width: 60%;
+    box-shadow: 0 3em 5em rgba(0,0,0,0.3);
+    z-index: 2;
+}
+.close-modal{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 3.5em;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(1, 1, 1, 0.794);
+}

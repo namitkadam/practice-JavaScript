@@ -1,0 +1,147 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Create a Grid */
+
+/* #wrapper{
+    display: grid;
+    width: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1vw;
+}
+.container{
+    background-color: gold; 
+    font-size: 2em;
+    text-align: center;
+    padding: 1em;
+} */    
+/* ----------------------------------------- */
+/* Create a Website Layout with CSS Grid */
+
+/* .wrapper{
+    display: grid   ;
+    grid-template-areas: 
+    "header header header"
+    "article nav ads" 
+    "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 1fr 20% 15%;
+    background-color: antiquewhite;
+    grid-gap: 20px;
+    height: 100vh;
+    margin: 0;
+}
+#header, #article, #nav, #ads, #footer{
+    background: gold;
+    padding: 20px;
+}
+#header{
+    grid-area: header;
+}
+#footer{
+    grid-area: footer; 
+}
+#article{
+    grid-area: article;
+}
+#nav{
+    grid-area: nav;
+}
+#ads{
+    grid-area: ads;
+} */
+/* ------------------------------- */
+/* The auto-fill Keyword */
+/* #wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150 px, 1fr));
+    grid-gap: 2vw;
+}
+.container{
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    background-color: whitesmoke;
+} */
+/* use auto-fill & auto-fit */
+/* .wrapper{
+    display: grid;
+    grid-gap: 10px;
+    border: 1px solid blue;
+    margin: 20px;
+}
+.container{
+    padding: 5px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 20px;
+}
+.auto-fill{
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+}
+.auto-fit{
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+} */
+
+/* .outer-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+}
+.outer-wrapper .container{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: red;
+}
+.inner-wrapper{
+    display: grid;
+    background-color: red;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+}
+.inner-wrapper .container{
+    background-color: antiquewhite;
+} */
+
+#grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    height: 90vh;
+    background-color: beige;
+  }
+  #grid > div {
+    padding: 20px;
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+  }
+  .red {
+    background: orangered;
+    grid-column: auto; 
+    grid-row: auto;
+  }
+  .green {
+    background: yellowgreen;
+    grid-column: auto; 
+    grid-row: auto;
+  }
+  .blue {
+    background: steelblue;
+    grid-column: auto; 
+    grid-row: auto;
+  }
+  .gray {
+    border: 16px solid black;
+    background: silver;
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;
+  }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SinUp page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper_signUp">
+      <div class="container_signUp">
+        <form action="/" method="get">
+          <label for="UserName"
+            ><i class="fa-solid fa-user"></i> UserName</label
+          >
+          <input
+            type="text"
+            id="user_signUp"
+            class="input_user-password"
+            name="UserName"
+            placeholder="User Name"
+          />
+          <label for="UserPassword"
+            ><i class="fa-solid fa-lock user_icon"></i> Password</label
+          >
+          <input
+            type="password"
+            name="UserPassword"
+            id="user_signUp_password"
+            class="input_user-password"
+            placeholder="Password"
+          />
+          <button type="submit" id="signUp_btn">SinUp</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

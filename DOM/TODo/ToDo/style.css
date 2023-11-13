@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Roboto Slab", serif;
+    box-sizing: border-box;
+  }
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .wrp-todo{
+    background-color: rgb(255, 132, 0);
+    padding: 40px;
+    border-radius: 10px;
+
+}
+.wrapper .wrp-todo .input-task{
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 5px ;
+}
+.wrapper .wrp-todo .btn{
+    height: 40px;
+    width: 60px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(20 83 101);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+.wrapper .wrp-todo .btn:hover{
+    background-color: rgb(254 202 60);
+}
+.input-add{
+    margin: 20px 0;
+    position: relative;
+    list-style: none;
+
+}
+.input-add input {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.input-add li {
+    padding: 5PX 0;
+}
+.input-add li i{
+    position: absolute;
+    right: -10px;
+    cursor: pointer;
+    color: #fff;
+/* left: 0px; */    
+}
+.input-add li i:hover{
+    color: black;
+}

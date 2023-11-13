@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="calculator">
+      <div class="container-cal">
+        <input type="text" class="cal-output" readonly />
+        <section class="wrapper-cal-btn">
+          <div class="cal-input">
+            <input type="button" class="cal-btn clear-btn" value="AC" />
+            <input type="button" class="cal-btn" value="Del" />
+            <input type="button" class="cal-btn" value="\" />
+            <input type="button" class="cal-btn" value="*" />
+          </div>
+          <div class="cal-input">
+            <input type="button" class="cal-btn" value="1" />
+            <input type="button" class="cal-btn" value="2" />
+            <input type="button" class="cal-btn" value="3" />
+            <input type="button" class="cal-btn" value="+" />
+          </div>
+          <div class="cal-input">
+            <input type="button" class="cal-btn" value="4" />
+            <input type="button" class="cal-btn" value="5" />
+            <input type="button" class="cal-btn" value="6" />
+            <input type="button" class="cal-btn" value="-" />
+          </div>
+          <div class="cal-input">
+            <input type="button" class="cal-btn" value="7" />
+            <input type="button" class="cal-btn" value="8" />
+            <input type="button" class="cal-btn" value="9" />
+            <input type="button" class="cal-btn" value="%" />
+            <!-- <input type="button" class="cal-btn" value="=" /> -->
+          </div>
+          <div class="cal-input">
+            <input type="button" class="cal-btn bg-white" disabled value />
+            <input type="button" class="cal-btn" value="0" />
+            <input type="button" class="cal-btn" value="." />
+            <input type="button" class="cal-btn equal-btn" value="=" />
+          </div>
+        </section>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

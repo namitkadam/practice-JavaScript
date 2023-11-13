@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper_login">
+      <div class="container_login">
+        <h5>Login</h5>
+        <form id="form" action="/" method="get">
+          <label for="usreName">
+            <i class="fa-solid fa-user"></i> UserName</label
+          >
+          <input
+            type="text"
+            id="user_login"
+            name="usreName"
+            placeholder="  Enter Your UserName"
+          />
+
+          <label for="userPassword"
+            ><i class="fa-solid fa-lock user_icon"></i> Password</label
+          >
+          <input
+            type="password"
+            id="user_password"
+            name="userPassword"
+            placeholder="Enter Your Password"
+          />
+          <button type="submit" id="login_btn">Login</button>
+        </form>
+        <div id="errro"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
