@@ -1,6 +1,6 @@
-// const msg = document.getElementById("msg");
-// let h1Element = document.createElement("h1");
-// h1Element.innerHTML = `hey`;
-// msg.appendChild(h1Element);
-import { user } from "./script";
-console.log(user);
+const welMsg = document.querySelector("#wel-msg");
+const logOutBtn = document.getElementById("logOut-btn");
+welMsg.innerHTML = `Welcome ${localStorage.userName}`;
+logOutBtn.addEventListener("click", () => {
+  localStorage.clear();
+});
