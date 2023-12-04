@@ -136,7 +136,7 @@ console.log("---------------sort Method---------------");
 
 const owner = ["Jonas", "Zach", "Adam", "Martha"];
 console.log(owner.sort());
-console.log(owner);
+// console.log(owner);
 
 // Number
 
@@ -184,4 +184,109 @@ console.log(y);
 
 const z = Array.from({ length: 7 }, (_, i) => i + 1);
 console.log(z);
-intrs;
+
+// Swapping Array Element
+let arrSwap = [1, 2];
+// [arrSwap[0], arrSwap[1]] = [arrSwap[1], arrSwap[0]];
+let temp = arrSwap[0];
+arrSwap[0] = arrSwap[1];
+arrSwap[1] = temp;
+console.log(arrSwap);
+
+// Write a JavaScript function to get the first element of an array.
+// Passing the parameter 'n' will return the first 'n' elements of the array.
+let firstEle = function (arr, n) {
+  if (arr === null) return void 0;
+
+  if (n == null) return arr[0];
+
+  if (n < 0) return [];
+  return arr.slice(0, n);
+};
+console.log(firstEle([7, 9, 0, -2]));
+console.log(firstEle([], 3));
+console.log(firstEle([7, 9, 0, -2], 3));
+console.log(firstEle([7, 9, 0, -2], 6));
+console.log(firstEle([7, 9, 0, -2], -3));
+
+// Write a JavaScript function to get the last element of an array.
+// Passing the parameter 'n' will return the last 'n' elements of the array.
+
+let lastEle = function (arr, n) {
+  if (arr == null) return void 0;
+
+  if (n == null) return arr[arr.length - 1];
+
+  return arr.slice(Math.max(arr.length - n, 0));
+};
+console.log(lastEle([7, 9, 0, -2]));
+console.log(lastEle([], 3));
+console.log(lastEle([7, 9, 0, -2], 3));
+console.log(lastEle([7, 9, 0, -2], 6));
+console.log(lastEle([7, 9, 0, -2], -3));
+
+// Write a simple JavaScript program to join all elements of the following array into a string.
+// Sample array : myColor = ["Red", "Green", "White", "Black"];
+let color = ["Red", "Green", "White", "Black"];
+console.log(color.join(", "));
+console.log(color.join("+"));
+console.log(color.join(","));
+
+// let arrLeng = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+// let mf = 1;
+// let m = 0;
+// let item;
+// for (let i = 0; i < arrLeng.length; i++) {
+//   for (let j = i; j < arrLeng.length; j++) {
+//     if (arrLeng[i] == arrLeng[j]) m++;
+//     if (mf < m) {
+//       mf = m;
+//       item = arrLeng[i];
+//       console.log(mf);
+//     }
+//   }
+//   m = 0;
+// }
+
+let counter = {
+  count: 0,
+  increment: () => {
+    counter.count++;
+  },
+};
+counter.increment();
+
+async function* printNumbers(start) {
+  let num = 0;
+  while (num <= 10) {
+    const value = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(start + num++);
+      }, 1000);
+    });
+    yield;
+  }
+}
+const generator = printNumbers(5);
+
+(async () => {
+  let result = await generator.next();
+  console.log(result);
+
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+  result = await generator.next();
+  console.log(result);
+})();
