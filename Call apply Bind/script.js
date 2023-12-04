@@ -52,3 +52,37 @@ function createUser(userName, email, password) {
 
 const user = new createUser("Raj", "raj@gmail.com", 12345);
 console.log(user);
+
+// ----------------------------------------------------------------------------------//
+
+// Write a JavaScript function to check whether an 'input' is an array or not.
+is_array = function (input) {
+  if (toString.call(input) === "[object Array]") return true;
+  return false;
+};
+console.log(is_array("w3resource"));
+console.log(is_array([1, 2, 4, 0]));
+
+let obj = { name: "Namit" };
+
+function hello() {
+  return `Hello ${this.name}`;
+}
+
+console.log(hello.call(obj));
+
+function sayHello(day, status) {
+  return `Hello ${this.name} today is ${day} and feel ${status}`;
+}
+console.log(sayHello.apply(obj, ["Monday", "good"]));
+
+let helloFn = hello.bind(obj);
+console.log("use Bind:", helloFn());
+
+const person = { name: "Piyush" };
+
+function sayHi(age) {
+  return `${this.name} is ${age} years`;
+}
+console.log(sayHi.call(person, 28));
+console.log(sayHi.bind(person, 28));
