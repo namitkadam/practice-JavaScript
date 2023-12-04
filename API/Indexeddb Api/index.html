@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indexeddb Api</title>
+    <style>
+      #upDates {
+        display: none;
+      }
+      button {
+        cursor: pointer;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid black;
+        padding: 2px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="Name" placeholder="Name" />
+      <input type="tel" id="tel" placeholder="Phone" />
+      <input type="email" id="Email" placeholder="Email" />
+      <input type="text" id="address" placeholder="Address" />
+      <button id="submit">Submit Data</button>
+      <button id="upDates">UpDate Data</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>UpDate</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
