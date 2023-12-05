@@ -5,6 +5,7 @@ const tbody = document.querySelector("tbody");
 const table = document.querySelector("table");
 
 submit.addEventListener("click", (e) => {
+  e.preventDefault();
   if (
     form[0].value === "" ||
     form[1].value === "" ||
@@ -13,7 +14,7 @@ submit.addEventListener("click", (e) => {
   ) {
     alert("Entar the ditails");
   } else {
-    let idxDb = indexedDB.open("client");
+    let idxDb = indexedDB.open("client", 1);
     idxDb.onupgradeneeded = () => {
       let res = idxDb.result;
       res.createObjectStore("data", { autoIncrement: true });
@@ -28,14 +29,17 @@ submit.addEventListener("click", (e) => {
         Email: form[2].value,
         Address: form[3].value,
       });
+      alert("data has been added");
+      location.reload();
     };
+    console.log(form[0].value);
   }
 });
 
 function read() {
-  let idxDbRead = indexedDB.open("client", 1);
-  idxDbRead.onsuccess = () => {
-    let res = idxDbRead.result;
+  let idxDb = indexedDB.open("client", 1);
+  idxDb.onsuccess = () => {
+    let res = idxDb.result;
     let tran = res.transaction("data", "readonly");
     let store = tran.objectStore("data");
     let cursor = store.openCursor();
@@ -57,6 +61,8 @@ function read() {
     };
   };
 }
+
+read();
 
 let upDatesKey;
 function updates(e) {
@@ -96,4 +102,3 @@ function del(e) {
     location.reload();
   };
 }
-read();
