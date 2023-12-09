@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indexeddb Api</title>
     <style>
-      #upDates {
+      #upDates-btn {
         display: none;
       }
       button {
@@ -18,6 +18,9 @@
         padding: 2px;
         margin-top: 20px;
       }
+      #search-form {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -27,7 +30,12 @@
       <input type="email" id="Email" placeholder="Email" />
       <input type="text" id="address" placeholder="Address" />
       <button id="submit">Submit Data</button>
-      <button id="upDates">UpDate Data</button>
+      <button id="upDates-btn">UpDate Data</button>
+    </form>
+    <form id="search-form">
+      <input type="text" id="searchUser" placeholder="Search" />
+      <button id="search-btn">Search User</button>
+      <button id="clear-btn">Clear</button>
     </form>
     <table>
       <thead>
@@ -36,11 +44,12 @@
           <th>Phone</th>
           <th>Email</th>
           <th>Address</th>
-          <th>UpDate</th>
+          <th>Edit</th>
           <th>Delete</th>
         </tr>
       </thead>
       <tbody></tbody>
+      <tbody id="tbody"></tbody>
     </table>
     <script src="./script.js"></script>
   </body>
